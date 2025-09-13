@@ -1,0 +1,61 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: saturate(120%) blur(2px);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+}
+.modal {
+  background: var(--mantine-color-body, #fff);
+  color: inherit;
+  width: min(640px, 92vw);
+  max-height: 85vh;
+  overflow: auto;
+  border-radius: 12px;
+  padding: 20px 24px 24px;
+  box-shadow: var(--mantine-shadow-lg, 0 8px 30px rgba(0, 0, 0, 0.2));
+}
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.modalHeader h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.modalClose {
+  margin-left: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--mantine-color-gray-7);
+}
+.modalFigure {
+  margin: 12px 0;
+  display: grid;
+  place-items: center;
+}
+.modalMeta {
+  margin: 16px 0;
+}
+.modalMeta dt {
+  display: block;
+  font-weight: 700;
+  color: var(--mantine-color-black);
+}
+.modalMeta dd {
+  display: block;
+  margin: 0 0 12px 0;
+  color: var(--mantine-color-dimmed, #6b7280);
+}

@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom/vitest';
+import '@mantine/core/styles.css';
 
 if (typeof window !== 'undefined' && !window.matchMedia) {
   Object.defineProperty(window, 'matchMedia', {
@@ -8,11 +9,13 @@ if (typeof window !== 'undefined' && !window.matchMedia) {
       matches: false,
       media: query,
       onchange: null,
-      addListener() {},          
+      addListener() {},
       removeListener() {},
-      addEventListener() {},     
+      addEventListener() {},
       removeEventListener() {},
-      dispatchEvent() { return false; },
+      dispatchEvent() {
+        return false;
+      },
     }),
   });
 }
